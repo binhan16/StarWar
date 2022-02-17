@@ -1,0 +1,59 @@
+.search {
+  &__form {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__input {
+    max-width: 200px;
+    height: 40px;
+    padding: 0 0 0 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    background-color: var(--grey-dark);
+    font-size: 16px;
+    color: var(--white);
+    &:focus {
+      filter: brightness(150%);
+      transition: all 0.5s ease-in-out;
+    }
+  }
+
+  &__button {
+    height: 40px;
+    border-top: none;
+    border-left: none;
+    background-color: var(--grey-dark);
+    border-radius: 0 5px 5px 0;
+    ion-icon {
+      color: var(--grey-color);
+      font-size: 26px;
+    }
+    &:focus {
+      filter: brightness(150%);
+      border: none;
+    }
+  }
+
+  .login {
+    width: fit-content;
+    margin-top: 10px;
+    margin-left: auto;
+    color: var(--grey-dark);
+
+    &__button {
+      background-color: #000;
+      color: var(--grey-color);
+      font-size: 14px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: color 0.8s ease;
+      &:hover,
+      &:focus {
+        color: var(--white);
+      }
+    }
+  }
+}
