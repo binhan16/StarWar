@@ -3,6 +3,7 @@ import "./Slider.scss";
 import { Link } from "react-router-dom";
 import { SliderData } from "../../data";
 import Previews from "../Previews/Previews";
+import Button from "../Button/Button";
 
 function Slider() {
   const [current, setCurrent] = useState(0);
@@ -30,8 +31,35 @@ function Slider() {
     intervalSlider.current = null;
   };
 
+  useEffect(() => {
+    intervalSlider.current = setInterval(() => {
+      setCurrent((current) =>
+        current === SliderData.length - 1 ? 0 : current + 1
+      );
+    }, 6000);
+    return () => clearInterval(intervalSlider.current);
+  }, []);
+
+  useEffect(() => {
+    const allImages = document.querySelectorAll(".slider__item");
+    for (let img of allImages) {
+      img.style.transform = `translateX(-${current}00%)`;
+    }
+  }, [current]);
+
   return (
     <section className="slider">
+      <Button
+        name={"slider__button slider__button--left"}
+        open={prevSlide}
+        text={<ion-icon name="chevron-back-outline"></ion-icon>}
+      />
+
+      <Button
+        name={"slider__button slider__button--right"}
+        open={nextSlide}
+        text={<ion-icon name="chevron-forward-outline"></ion-icon>}
+      />
       <ul className="slider__container">
         {SliderData.map((slider, index) => {
           return (

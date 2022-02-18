@@ -3,6 +3,11 @@ import slider2 from "../assets/images/slider/slide2.jpg";
 import slider3 from "../assets/images/slider/slide3.jpg";
 import slider4 from "../assets/images/slider/slide4.jpg";
 
+import card1 from "../assets/images/cards/card1.png";
+import card2 from "../assets/images/cards/card2.jpg";
+import card3 from "../assets/images/cards/card3.png";
+import card4 from "../assets/images/cards/card4.jpg";
+
 const SliderData = [
   {
     image: slider1,
@@ -38,6 +43,30 @@ const SliderData = [
     theme: "light",
     color: "blue",
     button1: "READ MORE",
+  },
+];
+
+const cardsData = [
+  {
+    image: card1,
+    title: "The Book of Boba Fett Chapter 7 Episode Guide",
+  },
+  {
+    image: card2,
+    title: "5 Highlights from “Chapter 7: In the Name of Honor” ",
+  },
+];
+
+const cardVideo = [
+  {
+    image: card3,
+    title: "  Witness the Finale - The Book of Boba Fett ",
+    text: "All episodes now streaming, only on Disney+.",
+  },
+  {
+    image: card4,
+    title: ' "Stranger" - The Book of Boba Fett ',
+    text: "Don't miss a moment.",
   },
 ];
 

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Previews.scss";
+import "./Previews.css";
 
 function Previews({ data, changeSlide, current, interval }) {
   return (

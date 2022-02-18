@@ -4,6 +4,33 @@
   margin-top: 50px;
   margin-bottom: 30px;
   overflow: hidden;
+
+  &__button {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    padding: 4px;
+    font-size: 30px;
+    color: var(--white);
+    background-color: rgba(32, 32, 32, 0.5);
+    border-radius: 50%;
+    user-select: none;
+    transition: background_color 0.15s linear;
+    z-index: 10;
+
+    &--left {
+      left: 24px;
+    }
+
+    &--right {
+      right: 24px;
+    }
+    &:hover {
+      background-color: rgba(20, 20, 20, 0.5);
+    }
+  }
+
   &__container {
     display: flex;
   }
@@ -49,13 +76,38 @@
     }
 
     &--red a.button1 {
-      background-color: rgb(232, 0, 54);
+      background-color: var(--red-modal);
       margin-right: 10px;
     }
 
     &--red a.button2 {
-      background-color: rgba(0, 0, 0, 0.8);
+      background-color: var(--grey-dark);
       border: 2px solid white;
+    }
+
+    &--orange a.button1 {
+      background-color: var(--orange-color);
+      margin-right: 10px;
+    }
+
+    &--orange a.button2 {
+      background-color: var(--grey-dark);
+      border: 2px solid white;
+    }
+
+    &--brown a.button1 {
+      background-color: var(--brown-color);
+      margin-right: 10px;
+    }
+
+    &--brown a.button2 {
+      background-color: var(--grey-dark);
+      border: 2px solid white;
+    }
+
+    &--blue a.button1 {
+      background-color: var(--blue-color);
+      margin-right: 10px;
     }
   }
 }
