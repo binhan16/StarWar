@@ -48,5 +48,28 @@
     width: 100%;
     height: 700px;
     object-fit: cover;
+    z-index: 0;
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+
+    padding-top: 20px;
+    background-color: #476650;
+    background-size: 100% auto;
+    // background-position: top;
+    background-repeat: no-repeat;
+    background-image: url("https://lumiere-a.akamaihd.net/v1/images/bobf-gumstick-a-desktop_7b62e968.jpeg?region=0,0,1200,133");
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #476650;
   }
 }

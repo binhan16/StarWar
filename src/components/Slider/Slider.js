@@ -46,7 +46,6 @@ function Slider() {
       img.style.transform = `translateX(-${current}00%)`;
     }
   }, [current]);
-
   return (
     <section className="slider">
       <Button

@@ -1,0 +1,96 @@
+.cardVid {
+  width: 512px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 4px;
+  margin: 20px 20px 40px 20px;
+  &__image {
+    height: 288px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__bottom {
+    width: 100%;
+    color: var(--white);
+    background-color: rgba(26, 26, 26, 0.85);
+    border-radius: 0 0 4px 0;
+    position: relative;
+    .decal__contain {
+      top: 30px;
+      left: 30px;
+      display: block;
+      position: absolute;
+      z-index: 9;
+      width: 24px;
+      .decal {
+        &::before {
+          position: absolute;
+          width: 16px;
+          content: "";
+          border-radius: 2px;
+          border-top: 2px solid rgba(255, 255, 255, 0.2);
+          border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+          box-shadow: none;
+          transition: box-shadow 0.3s ease;
+        }
+
+        &::after {
+          position: absolute;
+          left: 30px;
+          width: 4px;
+          content: "";
+          border-radius: 2px;
+          border-top: 2px solid rgba(255, 255, 255, 0.2);
+          border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+          box-shadow: none;
+          transition: box-shadow 0.3s ease;
+        }
+      }
+    }
+
+    .cardVid__content {
+      color: var(--white);
+      //   background-color: rgba(26, 26, 26, 0.9);
+      margin: 50px 40px;
+      text-align: left;
+    }
+
+    .notch__contain {
+      position: relative;
+      height: 6px;
+      background-color: #476650;
+      &::before {
+        display: block;
+        position: absolute;
+        content: "";
+        z-index: 10;
+        left: 0;
+        border-right: 6px solid transparent;
+        width: 75%;
+        bottom: 0;
+        top: auto;
+        border-top: 6px solid #1a1a1a;
+      }
+
+      &::after {
+        display: block;
+        position: absolute;
+        content: "";
+        z-index: 10;
+        right: 0;
+        border-left: 6px solid transparent;
+        width: 40px;
+        bottom: 0;
+        top: auto;
+        border-top: 6px solid #1a1a1a;
+      }
+    }
+  }
+}

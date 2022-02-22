@@ -5,7 +5,7 @@ import slider4 from "../assets/images/slider/slide4.jpg";
 
 import card1 from "../assets/images/cards/card1.png";
 import card2 from "../assets/images/cards/card2.jpg";
-import card3 from "../assets/images/cards/card3.png";
+import card3 from "../assets/images/cards/card3.jpeg";
 import card4 from "../assets/images/cards/card4.jpg";
 
 const SliderData = [
@@ -57,7 +57,7 @@ const cardsData = [
   },
 ];
 
-const cardVideo = [
+const cardsVideo = [
   {
     image: card3,
     title: "  Witness the Finale - The Book of Boba Fett ",
@@ -70,4 +70,4 @@ const cardVideo = [
   },
 ];
 
-export { SliderData };
+export { SliderData, cardsData, cardsVideo };
