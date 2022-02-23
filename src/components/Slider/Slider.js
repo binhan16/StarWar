@@ -32,11 +32,13 @@ function Slider() {
   };
 
   useEffect(() => {
+    // side Effect
     intervalSlider.current = setInterval(() => {
       setCurrent((current) =>
         current === SliderData.length - 1 ? 0 : current + 1
       );
     }, 6000);
+    // clean up
     return () => clearInterval(intervalSlider.current);
   }, []);
 
