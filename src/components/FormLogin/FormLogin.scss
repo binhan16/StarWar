@@ -1,0 +1,30 @@
+.form {
+  &__account {
+    background-color: transparent;
+    color: var(--yellow-modal);
+    &:hover,
+    &:focus {
+      border: 1px solid var(--yellow-modal);
+    }
+  }
+
+  &__submit,
+  &__account {
+    height: 40px;
+    padding: 0 18px;
+    border-radius: 3px;
+    margin: 10px;
+    font-size: 16px;
+  }
+
+  &__submit {
+    background-color: var(--grey-modal);
+    color: var(--white);
+    transition: background_color 0.3s ease;
+  }
+
+  &__submit:hover,
+  &__submit:focus {
+    background-color: var(--blue-signin);
+  }
+}

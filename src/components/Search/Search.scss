@@ -42,6 +42,23 @@
     margin-left: auto;
     color: var(--grey-dark);
 
+    &__status {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    &__user {
+      width: 150px;
+      display: flex;
+      align-items: center;
+      ion-icon {
+        padding-top: 5px;
+        font-size: 30px;
+      }
+    }
+
     &__button {
       background-color: #000;
       color: var(--grey-color);
@@ -55,5 +72,13 @@
         color: var(--white);
       }
     }
+  }
+  .button__group {
+    width: fit-content;
+    margin-top: 10px;
+    margin-left: auto;
+    color: var(--grey-dark);
+    font-size: 20px;
+    font-weight: bold;
   }
 }

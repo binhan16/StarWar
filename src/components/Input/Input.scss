@@ -1,0 +1,35 @@
+.input {
+  height: 40px;
+  padding: 0 18px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  line-height: 40px;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  text-align: left;
+
+  &:focus {
+    background-color: var(--grey-modal);
+    color: var(--yellow-modal);
+    border: 1px solid var(--yellow-modal);
+    &::placeholder {
+      color: var(--white);
+      opacity: 0.5;
+    }
+  }
+
+  &--error {
+    border: 1px solid var(--red-modal);
+    &::placeholder {
+      color: var(--red-modal);
+    }
+  }
+
+  &__errors {
+    padding: 10px 0;
+    color: var(--red-modal);
+    text-align: left;
+  }
+}

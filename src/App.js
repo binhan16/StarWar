@@ -14,7 +14,7 @@ function App() {
   const [registerModal, setRegisterModal] = useState(false);
   const [logged, setLogged] = useLocalstorage("login", {
     display: "",
-    loggin: false,
+    login: false,
   });
   return (
     <div className="App">
@@ -35,7 +35,12 @@ function App() {
           title={"creat a new account"}
         />
       )}
-      <Header />
+      <Header
+        openLoginModal={setLoginModal}
+        openRegisterModal={setRegisterModal}
+        logged={logged}
+        setLogged={setLogged}
+      />
       <Router>
         <Nav />
         <Switch>

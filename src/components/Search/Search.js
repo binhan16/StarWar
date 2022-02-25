@@ -1,7 +1,9 @@
 import React from "react";
 import "./Search.scss";
 
-function Search() {
+import Button from "../Button/Button";
+
+function Search({ openLoginModal, openRegisterModal, logged, setLogged }) {
   return (
     <div className="search">
       <form className="search__form">
@@ -10,15 +12,43 @@ function Search() {
           className="search__input"
           placeholder="Search Star Wars"
         />
-        <button aria-label="search-icon" className="search__button">
+        <button
+          aria-label="search-icon"
+          onClick={(e) => e.preventDefault()}
+          className="search__button"
+        >
           <ion-icon name="search-outline"></ion-icon>
         </button>
       </form>
-      <div className="login">
-        <button className="login__button">LOG IN</button>
-        <span>//</span>
-        <button className="login__button">SIGN UP</button>
-      </div>
+      {logged.login ? (
+        <div className="login__status">
+          <div className="login__user">
+            <span>
+              <ion-icon name="person-circle-outline"></ion-icon>
+            </span>
+            <span>{logged.display}</span>
+          </div>
+          <Button
+            open={() => setLogged({ display: "", login: false })}
+            text={"LOG OUT"}
+            name={"login__button"}
+          />
+        </div>
+      ) : (
+        <div className="button__group">
+          <Button
+            open={() => openLoginModal(true)}
+            text={"LOG IN"}
+            name={"login__button"}
+          ></Button>
+          <span>//</span>
+          <Button
+            open={() => openRegisterModal(true)}
+            text={"SIGN UP"}
+            name={"login__button"}
+          ></Button>
+        </div>
+      )}
     </div>
   );
 }

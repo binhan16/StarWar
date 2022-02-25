@@ -4,7 +4,7 @@ import Search from "../Search/Search";
 import Social from "../Social/Social";
 import "./Header.scss";
 
-function Header() {
+function Header({ openLoginModal, openRegisterModal, logged, setLogged }) {
   return (
     <div className="container">
       <header className="header">
@@ -13,7 +13,12 @@ function Header() {
           <img src={logo} alt="Star Wars" className="header__logo" />
         </a>
 
-        <Search />
+        <Search
+          openLoginModal={openLoginModal}
+          openRegisterModal={openRegisterModal}
+          logged={logged}
+          setLogged={setLogged}
+        />
       </header>
     </div>
   );
