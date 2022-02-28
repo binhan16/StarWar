@@ -40,13 +40,13 @@ function Search({ openLoginModal, openRegisterModal, logged, setLogged }) {
             open={() => openLoginModal(true)}
             text={"LOG IN"}
             name={"login__button"}
-          ></Button>
+          />
           <span>//</span>
           <Button
             open={() => openRegisterModal(true)}
             text={"SIGN UP"}
             name={"login__button"}
-          ></Button>
+          />
         </div>
       )}
     </div>

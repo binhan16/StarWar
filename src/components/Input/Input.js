@@ -7,6 +7,7 @@ function Input({ type, id, text, validation, error }) {
       <input
         type={type}
         id={id}
+        aria-required="true"
         maxLength="60"
         className={error ? "input input--error" : "input"}
         placeholder={text}

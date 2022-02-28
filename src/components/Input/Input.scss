@@ -20,6 +20,10 @@
     }
   }
 
+  &--expand {
+    width: 100%;
+  }
+
   &--error {
     border: 1px solid var(--red-modal);
     &::placeholder {

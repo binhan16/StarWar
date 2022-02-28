@@ -1,13 +1,16 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+import "./App.scss";
+
 import Header from "./components/Header/Header";
 import Nav from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
+import Modal from "./components/Modal/Modal";
+
 import Home from "./modules/HomePage/Home";
 
 import useLocalstorage from "./hooks/useLocalstorage";
-import "./App.scss";
-import Modal from "./components/Modal/Modal";
 
 function App() {
   const [loginModal, setLoginModal] = useState(false);
@@ -16,6 +19,7 @@ function App() {
     display: "",
     login: false,
   });
+
   return (
     <div className="App">
       {loginModal && (

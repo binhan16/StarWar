@@ -1,15 +1,18 @@
-import React, { useState } from "react";
-import Button from "../Button/Button";
-import FormSuccess from "../FormSuccess/FormSuccess";
-
-import ModalLogo from "../../assets/images/modal-logo.png";
-import useLocalstorage from "../../hooks/useLocalstorage";
-import FormLogin from "../FormLogin/FormLogin";
-import FormRegister from "../FormRegister/FormRegister";
+import { useState } from "react";
 
 import "./Modal.scss";
 
-function Modal({ closeModal, openModal, title, setLogged }) {
+import ModalLogo from "../../assets/images/modal-logo.png";
+
+import Button from "../Button/Button";
+
+import useLocalstorage from "../../hooks/useLocalstorage";
+
+import FormLogin from "../FormLogin/FormLogin";
+import FormRegister from "../FormRegister/FormRegister";
+import FormSuccess from "../FormSuccess/FormSuccess";
+
+export default function Modal({ closeModal, openModal, title, setLogged }) {
   const [users, setUsers] = useLocalstorage("users");
   const [successRegister, setSuccessRegister] = useState(false);
   const [invalid, setInvalid] = useState(false);
@@ -23,10 +26,11 @@ function Modal({ closeModal, openModal, title, setLogged }) {
           )
         ) : (
           <>
-            <img src={ModalLogo} className="modal__logo" />
+            <img src={ModalLogo} alt="" className="modal__logo" />
             {invalid && (
               <p className="modal__invalid">
-                Username and Password is required
+                The credentials you entered are incorrect. Reminder: passwords
+                are case sensitive.
               </p>
             )}
             <h2 className="modal__title">{title}</h2>
@@ -39,7 +43,7 @@ function Modal({ closeModal, openModal, title, setLogged }) {
                 setInvalid={setInvalid}
               />
             )}
-            {title === "creat your account" && (
+            {title === "create your account" && (
               <FormRegister
                 openModal={openModal}
                 closeModal={closeModal}
@@ -58,5 +62,3 @@ function Modal({ closeModal, openModal, title, setLogged }) {
     </div>
   );
 }
-
-export default Modal;
