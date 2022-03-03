@@ -1,4 +1,5 @@
 import React from "react";
+
 import logo from "../../assets/images/logo.jpg";
 import Search from "../Search/Search";
 import Social from "../Social/Social";

@@ -3,9 +3,10 @@ import "./Input.scss";
 
 function Input({ type, id, text, validation, error }) {
   return (
-    <div>
+    <>
       <input
         type={type}
+        name={id}
         id={id}
         aria-required="true"
         maxLength="60"
@@ -14,7 +15,7 @@ function Input({ type, id, text, validation, error }) {
         onBlur={validation}
       />
       <p className="input__errors">{error}</p>
-    </div>
+    </>
   );
 }
 

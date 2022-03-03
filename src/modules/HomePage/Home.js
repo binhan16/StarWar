@@ -3,7 +3,7 @@ import Slider from "../../components/Slider/Slider";
 import { Link } from "react-router-dom";
 import CardData from "../../components/CardData/CardData";
 import CardVideo from "../../components/CardVideo/CardVideo";
-import cardIMG from "../../assets/images/thumb-1920-1110562.jpg";
+import cardImg from "../../assets/images/thumb-1920-1110562.jpg";
 import { cardsData, cardsVideo } from "../../data";
 import "./Home.scss";
 
@@ -14,7 +14,7 @@ function Home() {
 
       <section className="cards">
         <div className="cards__header">
-          <img src={cardIMG} className="cards__img" />
+          <img src={cardImg} className="cards__img" />
           <div className="cards__header--info">
             <h3> All episodes now streaming, only on Disney+.</h3>
             <Link className="button1">STREAM NOW</Link>

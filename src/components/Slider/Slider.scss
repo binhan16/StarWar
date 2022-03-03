@@ -75,39 +75,44 @@
       letter-spacing: 2px;
     }
 
+    //Slide 1
     &--red a.button1 {
       background-color: var(--red-modal);
       margin-right: 10px;
     }
-
     &--red a.button2 {
       background-color: var(--grey-dark);
       border: 2px solid white;
     }
 
+    //Slide 2
     &--orange a.button1 {
       background-color: var(--orange-color);
       margin-right: 10px;
     }
-
     &--orange a.button2 {
       background-color: var(--grey-dark);
       border: 2px solid white;
     }
 
+    //Slide 3
     &--brown a.button1 {
       background-color: var(--brown-color);
       margin-right: 10px;
     }
-
     &--brown a.button2 {
       background-color: var(--grey-dark);
       border: 2px solid white;
     }
 
+    //Slide 4
     &--blue a.button1 {
       background-color: var(--blue-color);
       margin-right: 10px;
+    }
+    &--blue a.button2 {
+      background-color: var(--grey-dark);
+      border: 2px solid white;
     }
   }
 }

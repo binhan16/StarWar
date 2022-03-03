@@ -50,25 +50,6 @@
     font-weight: normal;
   }
 
-  .form__submit,
-  .form__account {
-    height: 40px;
-    padding: 0 18px;
-    border-radius: 3px;
-    font-size: 1rem;
-  }
-
-  .form__submit {
-    background-color: var(--grey-modal);
-    color: var(--white);
-    transition: background-color 0.3s ease;
-  }
-
-  .form__submit:hover,
-  .form__submit:focus {
-    background-color: var(--blue-modal);
-  }
-
   &__close {
     position: absolute;
     top: 20px;

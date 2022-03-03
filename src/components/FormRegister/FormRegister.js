@@ -1,20 +1,15 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
-import "./FormRegister.scss";
+import "./FormRegister.css";
 
 import Input from "../Input/Input";
 
 import useValidation from "../../hooks/useValidation";
 
-import validateInputs from "../../logic/validate-input";
+import validateInputs from "../../logic/validate-inputs";
 import validateForm from "../../logic/validate-form";
 
-export default function FormRegister({
-  openModal,
-  closeModal,
-  setUsers,
-  setSuccessRegister,
-}) {
+function FormRegister({ openModal, closeModal, setUsers, setSuccessRegister }) {
   const [selectAria, setSelectAria] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [isValid, setIsValid] = useState(false);
@@ -135,3 +130,5 @@ export default function FormRegister({
     </form>
   );
 }
+
+export default FormRegister;

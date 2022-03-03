@@ -15,7 +15,7 @@ const SliderData = [
     text: "Star Wars: The Old Republic celebrates 10 years with Legacy of Sith  expansion and a stunning new trailer!",
     theme: "light",
     color: "red",
-    button1: "MORE DETAILS",
+    button1: "READ MORE",
     button2: "EXPLORE",
   },
   {
@@ -24,8 +24,8 @@ const SliderData = [
     text: "The finale is here! Boba Fett and Fennec Shand face an escalating conflict.",
     theme: "light",
     color: "orange",
-    button1: "STREAM NOW",
-    button2: "SIGN UP NOW",
+    button1: "READ MORE",
+    button2: "EXPLORE",
   },
   {
     image: slider3,
@@ -33,7 +33,7 @@ const SliderData = [
     text: "Din Djarin’s amazing new ride gets its own LEGO Star Wars  set, and much more.",
     theme: "light",
     color: "brown",
-    button1: "MORE DETAILS",
+    button1: "READ MORE",
     button2: "EXPLORE",
   },
   {
@@ -43,6 +43,7 @@ const SliderData = [
     theme: "light",
     color: "blue",
     button1: "READ MORE",
+    button2: "EXPLORE",
   },
 ];
 
