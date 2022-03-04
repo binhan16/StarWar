@@ -1,0 +1,75 @@
+.cards {
+  margin: 50px auto;
+  width: 70%;
+
+  &__header {
+    position: relative;
+    height: 700px;
+    &--info {
+      position: absolute;
+      bottom: 20%;
+      //   left: 10px;
+      width: 500px;
+      h3 {
+        font-size: 20px;
+      }
+
+      a.button1 {
+        padding: 10px 32px 7px;
+        background-color: rgb(170, 53, 21);
+        color: var(--white);
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        margin-right: 10px;
+        &:hover {
+          box-shadow: 0 3px 6px 0 rgb(0 0 0 / 30%);
+        }
+      }
+
+      a.button2 {
+        padding: 10px 32px 7px;
+        background-color: var(--grey-dark);
+        border: 2px solid white;
+        color: var(--white);
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        &:hover {
+          box-shadow: 0 3px 6px 0 rgb(0 0 0 / 30%);
+        }
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+
+    padding-top: 20px;
+    background-color: #476650;
+    background-size: 100% auto;
+    // background-position: top;
+    background-repeat: no-repeat;
+    background-image: url("https://lumiere-a.akamaihd.net/v1/images/bobf-gumstick-a-desktop_7b62e968.jpeg?region=0,0,1200,133");
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #476650;
+  }
+}

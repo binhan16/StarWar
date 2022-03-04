@@ -71,4 +71,11 @@ const cardsVideo = [
   },
 ];
 
-export { SliderData, cardsData, cardsVideo };
+const SlideDetail = [
+  { id: 1, title: "Slide1" },
+  { id: 2, title: "Slide2" },
+  { id: 3, title: "Slide3" },
+  { id: 4, title: "Slide4" },
+];
+
+export { SliderData, cardsData, cardsVideo, SlideDetail };

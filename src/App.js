@@ -1,5 +1,10 @@
 import { useState } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 
 import "./App.scss";
 
@@ -8,9 +13,14 @@ import Nav from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
 import Modal from "./components/Modal/Modal";
 
-import Home from "./modules/HomePage/Home";
+import Home from "./views/Home/Home";
+import Starship from "./views/Starship/Starship";
+// import DetailsStarship from "./views/DetailsStarship/DetailsStarship";
+// import Actors from "./views/Actors/Actors";
+// import DetailsActor from "./views/DetailsActor/DetailsActor";
 
 import useLocalstorage from "./hooks/useLocalstorage";
+import Explore from "./components/Explore/Explore";
 
 function App() {
   const [loginModal, setLoginModal] = useState(false);
@@ -31,12 +41,11 @@ function App() {
           logged={logged}
         />
       )}
-
       {registerModal && (
         <Modal
           closeModal={setRegisterModal}
           openModal={setLoginModal}
-          title={"creat a new account"}
+          title={"create your account"}
         />
       )}
       <Header
@@ -47,9 +56,28 @@ function App() {
       />
       <Router>
         <Nav />
-        <Switch>
-          <Route path="/" component={Home} />
-        </Switch>
+        <main>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/starship">
+              <Starship />
+            </Route>
+            {/* <Route exact path="/starships">
+              {logged.login ? <Starships /> : <Redirect to="/" />}
+            </Route>
+            <Route path="/starships/:id">
+              {logged.login ? <DetailsStarship /> : <Redirect to="/" />}
+            </Route>
+            <Route exact path="/actors">
+              {logged.login ? <Actors /> : <Redirect to="/" />}
+            </Route>
+            <Route path="/actors/:id">
+              {logged.login ? <DetailsActor /> : <Redirect to="/" />}
+            </Route> */}
+          </Switch>
+        </main>
         <Footer />
       </Router>
     </div>

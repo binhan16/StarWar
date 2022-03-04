@@ -16,7 +16,7 @@ function Nav() {
             <span className="nav__link-bar nav__link-bar--2"></span>
           </li>
           <li className="nav__link">
-            <NavLink to="/films">FILMS</NavLink>
+            <NavLink to="/starship">STARSHIP</NavLink>
             <span className="nav__link-bar nav__link-bar--3"></span>
           </li>
           <li className="nav__link">

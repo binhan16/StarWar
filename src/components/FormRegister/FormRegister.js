@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import "./FormRegister.css";
+import "./FormRegister.scss";
 
 import Input from "../Input/Input";
 
@@ -62,7 +62,7 @@ function FormRegister({ openModal, closeModal, setUsers, setSuccessRegister }) {
           type={showPassword ? "text" : "password"}
           name="password"
           id="password"
-          maxLength="60"
+          maxLength="15"
           className={
             !errors.password
               ? "input input--expand"
@@ -109,6 +109,16 @@ function FormRegister({ openModal, closeModal, setUsers, setSuccessRegister }) {
             onClick={() => setShowPassword(!showPassword)}
           />
           <label htmlFor="show">Show password</label>
+        </div>
+
+        <div className="form__show">
+          <input type="checkbox" className="form__checkbox" />
+          <label>
+            I have read and agree to the{" "}
+            <a href="https://disneytermsofuse.com/english/" target={"blank"}>
+              Terms of Use.
+            </a>
+          </label>
         </div>
       </div>
 

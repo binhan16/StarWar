@@ -28,7 +28,7 @@ export default function Modal({ closeModal, openModal, title, setLogged }) {
           <>
             <img src={ModalLogo} alt="" className="modal__logo" />
             {invalid && (
-              <p className="modal__invalid">Username & Password invalid</p>
+              <p className="modal__invalid">Username & Password error</p>
             )}
             <h2 className="modal__title">{title}</h2>
             {title === "sign in" && (

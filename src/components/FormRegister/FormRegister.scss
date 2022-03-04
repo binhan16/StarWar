@@ -27,10 +27,17 @@
     align-items: center;
     padding-bottom: 20px;
     background-color: var(--background-modal);
+
+    label a {
+      color: var(--yellow-modal);
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   &__checkbox {
-    margin: 0 20px 0 0;
+    margin: 20px 20px 20px 0;
     position: relative;
     width: 20px;
     height: 20px;
