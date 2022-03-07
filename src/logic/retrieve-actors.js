@@ -1,7 +1,6 @@
-import getData from "../utils/getData"
-import { initialActorsUrl } from "./../constants/index"
+import getData from "../utils/getData";
+import { initialActorsUrl } from "./../constants/index";
 
+const retrieveActors = async () => await getData(initialActorsUrl);
 
-const retrieveActors = async () => await getData(initialActorsUrl)
-
-export default retrieveActors
+export default retrieveActors;

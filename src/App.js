@@ -15,12 +15,15 @@ import Modal from "./components/Modal/Modal";
 
 import Home from "./views/Home/Home";
 import Starship from "./views/Starship/Starship";
+import StarshipDetails from "./views/StarshipDetails/StarshipDetails";
+import Actor from "./views/Actor/Actor";
+import ActorDetail from "./views/ActorDetail/ActorDetail";
 // import DetailsStarship from "./views/DetailsStarship/DetailsStarship";
+
 // import Actors from "./views/Actors/Actors";
 // import DetailsActor from "./views/DetailsActor/DetailsActor";
 
 import useLocalstorage from "./hooks/useLocalstorage";
-import Explore from "./components/Explore/Explore";
 
 function App() {
   const [loginModal, setLoginModal] = useState(false);
@@ -61,21 +64,22 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
-            <Route exact path="/starship">
+
+            {/* Starships */}
+            <Route exact path="/starships">
               <Starship />
             </Route>
-            {/* <Route exact path="/starships">
-              {logged.login ? <Starships /> : <Redirect to="/" />}
-            </Route>
             <Route path="/starships/:id">
-              {logged.login ? <DetailsStarship /> : <Redirect to="/" />}
+              <StarshipDetails />
             </Route>
-            <Route exact path="/actors">
-              {logged.login ? <Actors /> : <Redirect to="/" />}
+
+            {/* Actors */}
+            <Route exact path="/actor">
+              <Actor />
             </Route>
-            <Route path="/actors/:id">
-              {logged.login ? <DetailsActor /> : <Redirect to="/" />}
-            </Route> */}
+            <Route path="/actor/:id">
+              <ActorDetail />
+            </Route>
           </Switch>
         </main>
         <Footer />

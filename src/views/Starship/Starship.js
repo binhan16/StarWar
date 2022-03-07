@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-import "./Starship.css";
+import "./Starship.scss";
 
 import List from "../../components/List/List";
 import Button from "../../components/Button/Button";
@@ -31,7 +31,7 @@ export default function Starship() {
     };
   }, []);
 
-  const handleAddNaus = async () => {
+  const handleAddFilm = async () => {
     if (page) {
       const res = await getData(page);
       setStarshipsList([...starshipList, ...res.results]);
@@ -39,24 +39,20 @@ export default function Starship() {
     }
   };
 
-  // const handleScrollTop = () => {
-  //   window.scrollTo(0, 0);
-  // };
-
   return (
     <>
       {starshipList && (
         <>
           <div className="select">
-            <p className="select__tilte"> Star Wars Film Selector </p>
-            <select></select>
+            <p className="select__title"> Star Wars Film Selector </p>
+            {/* <select></select> */}
           </div>
           <List list={starshipList} page={"starships"} />
           {starshipList.length < 36 && (
             <Button
-              open={handleAddNaus}
-              text={"VIEW MORE"}
-              name={"view__button"}
+              open={handleAddFilm}
+              text={"LOAD MORE"}
+              name={"load__button"}
             />
           )}
         </>

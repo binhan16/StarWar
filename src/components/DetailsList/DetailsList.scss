@@ -1,0 +1,35 @@
+.section {
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 60%;
+    margin: 0 auto 20px;
+    padding: 20px;
+  }
+
+  &__item {
+    width: 300px;
+    margin: 0 1em 2em;
+    color: var(--white);
+    text-align: left;
+    p {
+      margin-left: 20px;
+      margin-right: 20px;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__title {
+    padding: 15px 20px;
+    background-color: var(--black);
+    color: var(--gold-color);
+    font-size: 1.5rem;
+    text-align: center;
+    border-top: 2px solid var(--grey-color);
+    border-bottom: 2px solid var(--grey-color);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

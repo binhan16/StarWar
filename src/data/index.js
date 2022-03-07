@@ -71,11 +71,42 @@ const cardsVideo = [
   },
 ];
 
-const SlideDetail = [
-  { id: 1, title: "Slide1" },
-  { id: 2, title: "Slide2" },
-  { id: 3, title: "Slide3" },
-  { id: 4, title: "Slide4" },
+// Api : "https://swapi.dev/api/people/"
+const pilotsList = [
+  "name",
+  "height",
+  "mass",
+  "hair_color",
+  "skin_color",
+  "eye_color",
+  "birth_year",
+  "gender",
+];
+// Api : "https://swapi.dev/api/films/"
+const filmsList = [
+  "title",
+  "episode_id",
+  "director",
+  "producer",
+  "release_date",
 ];
 
-export { SliderData, cardsData, cardsVideo, SlideDetail };
+// Api : "https://swapi.dev/api/starships/"
+const starshipsList = [
+  "name",
+  "model",
+  "manufacturer",
+  "cost_in_credits",
+  "length",
+  "max_atmosphering_speed",
+  "crew",
+];
+
+export {
+  SliderData,
+  cardsData,
+  cardsVideo,
+  pilotsList,
+  filmsList,
+  starshipsList,
+};
