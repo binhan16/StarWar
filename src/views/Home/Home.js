@@ -2,16 +2,19 @@ import React from "react";
 import Slider from "../../components/Slider/Slider";
 import { Link } from "react-router-dom";
 import CardData from "../../components/CardData/CardData";
-import CardVideo from "../../components/CardVideo/CardVideo";
+// import CardVideo from "../../components/CardVideo/CardVideo";
 import cardImg from "../../assets/images/thumb-1920-1110562.jpg";
 import { cardsData, cardsVideo } from "../../data";
 import "./Home.scss";
+import YoutubeEmbed from "../../components/YoutubeEmbed/YoutubeEmbed";
 
 function Home() {
   return (
     <>
+      <span className="title">
+        ALL OF YOUR STAR WARS FAVORITES NOW STREAMING ON DISNEY+
+      </span>
       <Slider />
-
       <section className="cards">
         <div className="cards__header">
           <img src={cardImg} className="cards__img" />
@@ -33,7 +36,7 @@ function Home() {
         </div>
 
         <div className="cards__footer">
-          {cardsVideo.map((card, index) => {
+          {/* {cardsVideo.map((card, index) => {
             return (
               <Link key={index}>
                 <CardVideo
@@ -43,7 +46,15 @@ function Home() {
                 />
               </Link>
             );
-          })}
+          })} */}
+
+          <div className="cards__footer--vid1">
+            <YoutubeEmbed embedId="sUxcjRyXeHs" />
+          </div>
+
+          <div className="cards__footer--vid2">
+            <YoutubeEmbed embedId="m5uavCyNvE4" />
+          </div>
         </div>
       </section>
     </>

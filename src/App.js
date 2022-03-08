@@ -18,10 +18,6 @@ import Starship from "./views/Starship/Starship";
 import StarshipDetails from "./views/StarshipDetails/StarshipDetails";
 import Actor from "./views/Actor/Actor";
 import ActorDetail from "./views/ActorDetail/ActorDetail";
-// import DetailsStarship from "./views/DetailsStarship/DetailsStarship";
-
-// import Actors from "./views/Actors/Actors";
-// import DetailsActor from "./views/DetailsActor/DetailsActor";
 
 import useLocalstorage from "./hooks/useLocalstorage";
 

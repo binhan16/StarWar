@@ -13,7 +13,7 @@ function FormLogin({ openModal, closeModal, users, setLogged, setInvalid }) {
           name.value.trim() === user.email) &&
         password.value.trim() === user.password
       ) {
-        setLogged({ display: user.displayname, login: true });
+        setLogged({ display: user.displayname || user.email, login: true });
         closeModal(false);
         return;
       }
@@ -28,6 +28,7 @@ function FormLogin({ openModal, closeModal, users, setLogged, setInvalid }) {
       <button className="form__submit" aria-label="Sign in">
         Sign in
       </button>
+      <button className="form__submit"> or Login with Social Accounts</button>
 
       <Button
         name={"form__account"}

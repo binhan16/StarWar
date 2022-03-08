@@ -26,8 +26,10 @@ function Search({ openLoginModal, openRegisterModal, logged, setLogged }) {
             <span>
               <ion-icon name="person-circle-outline"></ion-icon>
             </span>
-            <span>{logged.display}</span>
+
+            <span className="login__user--name">{logged.display}</span>
           </div>
+          <span>//</span>
           <Button
             open={() => setLogged({ display: "", login: false })}
             text={"LOG OUT"}

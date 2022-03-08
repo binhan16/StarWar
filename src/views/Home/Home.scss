@@ -1,3 +1,14 @@
+span.title {
+  color: var(--grey-color);
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+  cursor: pointer;
+}
+
 .cards {
   margin: 50px auto;
   width: 70%;
@@ -71,5 +82,37 @@
     justify-content: center;
 
     background-color: #476650;
+
+    // &--video {
+    //   width: 512px;
+    //   height: 100%;
+    //   display: flex;
+    //   flex-direction: column;
+    //   overflow: hidden;
+    //   border-radius: 4px;
+    //   margin: 20px 20px 40px 20px;
+    // }
+  }
+}
+
+.video-responsive {
+  // // overflow: hidden;
+  // padding-bottom: 56.25%;
+  // // position: relative;
+  // height: 400px;
+  width: 512px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 4px;
+  margin: 20px 20px 40px 20px;
+
+  iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    // position: absolute;
   }
 }

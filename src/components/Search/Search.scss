@@ -54,8 +54,20 @@
       display: flex;
       align-items: center;
       ion-icon {
+        color: var(--grey-color);
         padding-top: 5px;
+        padding-right: 5px;
         font-size: 30px;
+        cursor: pointer;
+      }
+
+      &--name {
+        color: var(--grey-color);
+        transition: color 0.8s ease;
+        cursor: pointer;
+        &:hover {
+          color: var(--white);
+        }
       }
     }
 
