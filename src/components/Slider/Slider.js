@@ -48,6 +48,7 @@ function Slider() {
       img.style.transform = `translateX(-${current}00%)`;
     }
   }, [current]);
+
   return (
     <section className="slider">
       <Button
@@ -72,7 +73,9 @@ function Slider() {
               <div className={`slider__info slider__info--${slider.color}`}>
                 <h1>{slider.title}</h1>
                 <h3>{slider.text}</h3>
-                <Link className="button1">{slider.button1}</Link>
+                <Link to="/news/blogs" className="button1">
+                  {slider.button1}
+                </Link>
                 <Link className="button2">{slider.button2}</Link>
               </div>
             </li>

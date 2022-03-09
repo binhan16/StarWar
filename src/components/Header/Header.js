@@ -10,6 +10,7 @@ function Header({ openLoginModal, openRegisterModal, logged, setLogged }) {
     <div className="container">
       <header className="header">
         <Social />
+
         <a href="/">
           <img src={logo} alt="Star Wars" className="header__logo" />
         </a>

@@ -14,6 +14,7 @@ export default function StarshipDetails() {
   const { id } = useParams();
   const [starships, setStarship] = useState(null);
   const [films, setFilms] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   const sourceRef = useRef(axios.CancelToken.source());
 

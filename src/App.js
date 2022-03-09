@@ -1,10 +1,5 @@
 import { useState } from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import "./App.scss";
 
@@ -20,6 +15,7 @@ import Actor from "./views/Actor/Actor";
 import ActorDetail from "./views/ActorDetail/ActorDetail";
 
 import useLocalstorage from "./hooks/useLocalstorage";
+import Blogs from "./views/Blogs/Blogs";
 
 function App() {
   const [loginModal, setLoginModal] = useState(false);
@@ -75,6 +71,11 @@ function App() {
             </Route>
             <Route path="/actor/:id">
               <ActorDetail />
+            </Route>
+
+            {/* news/blogs */}
+            <Route exact path="/news/blogs">
+              <Blogs />
             </Route>
           </Switch>
         </main>

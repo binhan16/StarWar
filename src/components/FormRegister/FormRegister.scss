@@ -25,7 +25,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     background-color: var(--background-modal);
 
     label a {
@@ -37,7 +37,7 @@
   }
 
   &__checkbox {
-    margin: 20px 20px 20px 0;
+    margin: 10px;
     position: relative;
     width: 20px;
     height: 20px;
